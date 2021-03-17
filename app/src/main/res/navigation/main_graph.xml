@@ -21,7 +21,17 @@
         android:id="@+id/thirdButton"
         android:name="com.nk.navigationexample.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_second" >
+        <argument
+            android:name="myInt"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="myStr"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+    </fragment>
     <fragment
         android:id="@+id/thirdFragment"
         android:name="com.nk.navigationexample.ThirdFragment"

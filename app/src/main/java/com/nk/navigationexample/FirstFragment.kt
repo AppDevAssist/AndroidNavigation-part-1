@@ -38,7 +38,10 @@ class FirstFragment : Fragment() {
         // Inflate the layout for this fragment
         var view =  inflater.inflate(R.layout.fragment_first, container, false)
 
-        view.findViewById<Button>(R.id.secondButton).setOnClickListener{view.findNavController().navigate(R.id.action_firstFragment_to_secondFragment)}
+        view.findViewById<Button>(R.id.secondButton).setOnClickListener{
+            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(11, "Hello")
+            view.findNavController().navigate(action)
+        }
         view.findViewById<Button>(R.id.thirdButton).setOnClickListener{view.findNavController().navigate(R.id.action_firstFragment_to_thirdFragment)}
         return view
     }
