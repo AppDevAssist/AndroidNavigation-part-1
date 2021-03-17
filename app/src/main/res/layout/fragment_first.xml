@@ -14,8 +14,9 @@
         android:layout_height="wrap_content"
         android:text="Second"
         app:layout_constraintBottom_toTopOf="@+id/thirdButton"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="168dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/thirdButton"
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:text="Third"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/secondButton"
-        tools:layout_editor_absoluteX="168dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

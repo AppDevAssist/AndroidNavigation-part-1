@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
+import androidx.navigation.fragment.navArgs
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +23,7 @@ class SecondFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    val args: SecondFragmentArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +40,7 @@ class SecondFragment : Fragment() {
         // Inflate the layout for this fragment
         var view =  inflater.inflate(R.layout.fragment_second, container, false)
 
-
+        Toast.makeText(activity, args.myStr + args.myInt, Toast.LENGTH_SHORT).show()
         return view
     }
 
