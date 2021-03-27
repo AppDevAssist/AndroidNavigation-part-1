@@ -12,13 +12,17 @@
         tools:layout="@layout/fragment_first" >
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/thirdButton" />
+            app:destination="@id/secondFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim" />
         <action
             android:id="@+id/action_firstFragment_to_thirdFragment"
             app:destination="@id/thirdFragment" />
     </fragment>
     <fragment
-        android:id="@+id/thirdButton"
+        android:id="@+id/secondFragment"
         android:name="com.nk.navigationexample.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
