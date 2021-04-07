@@ -14,13 +14,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        setSupportActionBar(findViewById(R.id.toolBar))
-
-        val navController = findNavController(R.id.fragment)
-        val config = AppBarConfiguration(navController.graph)
-
-        findViewById<Toolbar>(R.id.toolBar).setupWithNavController(navController, config)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
