@@ -6,7 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.appbar.CollapsingToolbarLayout
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -44,6 +49,17 @@ class FirstFragment : Fragment() {
         }
         view.findViewById<Button>(R.id.secondFragment).setOnClickListener{view.findNavController().navigate(R.id.action_firstFragment_to_thirdFragment)}
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val navController = findNavController()
+        val appBarConfiguration = AppBarConfiguration(navController.graph)
+        val toolbar = view.findViewById<Toolbar>(R.id.toolBar)
+        val layout = view.findViewById<CollapsingToolbarLayout>(R.id.collapsingToolbarLayout)
+
+        layout.setupWithNavController(toolbar, navController, appBarConfiguration)
+
+        super.onViewCreated(view, savedInstanceState)
     }
 
     companion object {
