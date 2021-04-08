@@ -4,4 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#9FC3EC"
-    tools:context=".SecondFragment" />
+    tools:context=".SecondFragment" >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:background="?attr/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"/>
+</FrameLayout>

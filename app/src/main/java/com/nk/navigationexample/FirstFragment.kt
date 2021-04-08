@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -43,10 +44,15 @@ class FirstFragment : Fragment() {
         // Inflate the layout for this fragment
         var view =  inflater.inflate(R.layout.fragment_first, container, false)
 
+
         view.findViewById<Button>(R.id.secondButton).setOnClickListener{
             val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(11, "Hello")
             view.findNavController().navigate(action)
         }
+
+        val toolbar = view.findViewById<Toolbar>(R.id.toolBar)
+        toolbar.setTitle("My title")
+        (activity as AppCompatActivity?)!!.setSupportActionBar(toolbar)
         view.findViewById<Button>(R.id.secondFragment).setOnClickListener{view.findNavController().navigate(R.id.action_firstFragment_to_thirdFragment)}
         return view
     }
