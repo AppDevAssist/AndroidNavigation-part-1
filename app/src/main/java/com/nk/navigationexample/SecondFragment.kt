@@ -7,7 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.setupWithNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -40,8 +45,19 @@ class SecondFragment : Fragment() {
         // Inflate the layout for this fragment
         var view =  inflater.inflate(R.layout.fragment_second, container, false)
 
-        Toast.makeText(activity, args.myStr + args.myInt, Toast.LENGTH_SHORT).show()
+//        Toast.makeText(activity, args.myStr + args.myInt, Toast.LENGTH_SHORT).show()
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val navController = findNavController()
+        val appBarConfiguration = AppBarConfiguration(navController.graph)
+        val toolbar = view.findViewById<Toolbar>(R.id.toolBar)
+        toolbar.setTitle("My title 2");
+
+        view.findViewById<Toolbar>(R.id.toolBar)
+            .setupWithNavController(navController, appBarConfiguration)
+        super.onViewCreated(view, savedInstanceState)
     }
 
     companion object {

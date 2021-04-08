@@ -8,7 +8,6 @@
     <fragment
         android:id="@+id/firstFragment"
         android:name="com.nk.navigationexample.FirstFragment"
-        android:label="fragment_first"
         tools:layout="@layout/fragment_first" >
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
@@ -28,7 +27,6 @@
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.nk.navigationexample.SecondFragment"
-        android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
         <argument
             android:name="myInt"
