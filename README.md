@@ -25,3 +25,8 @@ Video: https://youtu.be/XwIe1Jzpp9o
 Checkout this tag of this repo: *collapsing-toolbar*
 
 Video: https://youtu.be/IaUuTPDjjQU
+
+### Part 6: Add Toolbar and CollapsingToolBar with Navigation component:
+Checkout this tag of this repo: *toolbar+collapsing-toolbar*
+
+Video: https://youtu.be/fkvcv3evdwM
